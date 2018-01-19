@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<style>
+
+.lineup 
+{
+float:left;
+margin: 10px;
+}
+
+</style>
+
+<body>
+
+<h1>Hangman Game</h1>
+
+<!--<form action=""> -->
+Enter One Letter: <input type="text" id="letter"><br>
+<button onClick="validateInput()">Submit</button>
+<!-- <input type="submit" value="Submit" onClick="validateInput()">
+</form> -->
+
+
+<img id="pic" src="hangman0.png" >
+
+<br>
+
+<div class="lineup" id="h">_</div>
+<div class="lineup" id="a">_</div>
+<div class="lineup" id="l">_</div>
+<div class="lineup" id="o">_</div>
+
+<script>
+
+var guess = 0;
+
+function validateInput()
+{
+var letter = document.getElementById("letter").value;
+<!-- document.getElementById("guess").innerHTML=""; -->
+
+if (letter == "h")
+{
+document.getElementById("h").innerHTML="H";
+return;
+}
+if (letter == "a")
+{
+document.getElementById("a").innerHTML="A";
+return;
+}
+if (letter == "l")
+{
+document.getElementById("l").innerHTML="L";
+return;
+}
+if (letter == "o")
+{
+document.getElementById("o").innerHTML="O";
+return;
+}
+
+guess++;
+
+updateImage();
+return;
+
+}
+
+function updateImage()
+{
+switch (guess)
+{
+case 1: document.getElementById("pic").src="hangman1.png";break;
+case 2: document.getElementById("pic").src="hangman2.png";break;
+case 3: document.getElementById("pic").src="hangman3.png";break;
+case 4: document.getElementById("pic").src="hangman4.png";break;
+case 5: document.getElementById("pic").src="hangman5.png";break;
+case 6: document.getElementById("pic").src="hangman6.png";break;
+}
+return;
+}
+
+</script>
+
+</body>
+
+</html>
