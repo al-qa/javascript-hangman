@@ -1,0 +1,19 @@
+
+body{
+  width: 800px;
+  margin: auto;
+  border: solid;
+  text-align: center;
+}
+
+ul li{
+  display: inline;
+  margin: 15px;
+  }
+
+/* .lineup
+{
+
+margin: 10px;
+border: solid;
+} */
